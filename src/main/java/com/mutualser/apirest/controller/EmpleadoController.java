@@ -26,7 +26,7 @@ public class EmpleadoController {
     }
 
     @GetMapping
-    public Page<Empleado> getAllEmpleados(@PageableDefault(page = 0, size = 2)Pageable pageable){
+    public Page<Empleado> getAllEmpleados(@PageableDefault(page = 0, size = 30)Pageable pageable){
         return empleadoService.getAllEmpleados(pageable);
     }
 
