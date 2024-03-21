@@ -3,13 +3,14 @@ package com.mutualser.apirest.model;
 import javax.persistence.*;
 
 @Entity
-public class Usuario {
+public class User {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idusuario")
     private Integer id;
-    private String nombre;
-    private String clave;
+    private String name;
+    private String password;
 
     public Integer getId() {
         return id;
@@ -19,19 +20,20 @@ public class Usuario {
         this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getName() {
+        return name;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getClave() {
-        return clave;
+    public String getPassword() {
+        return password;
     }
 
-    public void setClave(String clave) {
-        this.clave = clave;
+    public void setPassword(String password) {
+        this.password = password;
     }
+
 }
